@@ -7,6 +7,8 @@ using FluentValidation.AspNetCore;
 using Zip.APIClient.Validators;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+using Microsoft.Extensions.Logging;
+using Zip.APIClient.middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+
+
 
 builder.Services.AddApiVersioning(opt =>
 {
@@ -65,6 +70,8 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 // Register the Swagger generator, defining 1 or more Swagger documents
 
+
+app.ConfigureExceptionHandler();
 
 
 

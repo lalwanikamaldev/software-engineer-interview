@@ -26,7 +26,6 @@ namespace Zip.InstallmentsService
 		}
 
 		public DbSet<PaymentPlan> PaymentPlans { get; set; }
-
 		public DbSet<Installment> Installments { get; set; }
 	}
 	
