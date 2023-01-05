@@ -1,6 +1,6 @@
 using System;
 
-namespace Zip.InstallmentsService
+namespace Zip.Installment.Entities.Business
 {
     /// <summary>
     /// Data structure which defines all the properties for an installment.
